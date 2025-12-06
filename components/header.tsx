@@ -124,12 +124,42 @@ export default function Header() {
                 size="icon"
                 className="lg:hidden text-white"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                aria-label="Меню"
               >
-                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                {isMobileMenuOpen ? (
+                  <X className="h-6 w-6" width={24} height={24} />
+                ) : (
+                  <Menu className="h-6 w-6" width={24} height={24} />
+                )}
               </Button>
             </div>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="lg:hidden bg-black/95 backdrop-blur-md border-t border-white/10">
+            <nav className="container mx-auto px-4 py-6 flex flex-col space-y-4">
+              {navigation.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-white hover:text-[#a8996e] transition-colors duration-200 font-light tracking-wide text-lg py-2 font-cera-pro"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </a>
+              ))}
+              <a
+                href="tel:+78126605650"
+                className="text-white hover:text-[#a8996e] transition-colors duration-200 font-light tracking-wide text-lg py-2 font-cera-pro"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                7 812 660 56 50
+              </a>
+            </nav>
+          </div>
+        )}
       </header>
     </div>
   )
