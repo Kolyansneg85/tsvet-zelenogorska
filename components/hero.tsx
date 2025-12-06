@@ -7,57 +7,8 @@ import PresentationModal from "./presentation-modal"
 export default function Hero() {
   const [isPresentationModalOpen, setIsPresentationModalOpen] = useState(false)
 
-  const organizationJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "RealEstateAgent",
-    name: "ЖК Коллекционер",
-    description: "Клубный дом «Коллекционер» в Петроградском районе Санкт-Петербурга",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "улица Чапыгина 4",
-      addressLocality: "Санкт-Петербург",
-      addressRegion: "Санкт-Петербург",
-      addressCountry: "RU",
-    },
-    url: "https://kollektsioner-dom.ru",
-    telephone: "+7 (812) 660-56-50",
-    priceRange: "От 30792000 до 79276000",
-    areaServed: "Петроградский район",
-    serviceType: "Продажа недвижимости",
-  }
-
-  const realEstateJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ApartmentComplex",
-    name: "Клубный дом «Коллекционер»",
-    description: "Премиальный жилой комплекс в историческом центре Санкт-Петербурга",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "улица Чапыгина 4",
-      addressLocality: "Санкт-Петербург",
-      addressRegion: "Санкт-Петербург",
-      postalCode: "197046",
-      addressCountry: "RU",
-    },
-    numberOfAccommodationUnits: 69,
-    floorSize: {
-      "@type": "QuantitativeValue",
-      minValue: 42.8,
-      unitCode: "MTK",
-    },
-    amenityFeature: [
-      { "@type": "LocationFeatureSpecification", name: "Подземный паркинг", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Консьерж-сервис", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Пинакотека", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Приватный двор", value: true },
-    ],
-  }
-
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(realEstateJsonLd) }} />
-
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
@@ -67,6 +18,8 @@ export default function Hero() {
             fill
             className="object-cover brightness-95"
             priority
+            fetchPriority="high"
+            decoding="sync"
           />
           <div className="absolute inset-0 bg-black/30" />
         </div>
@@ -74,7 +27,7 @@ export default function Hero() {
         {/* Main Content */}
         <div className="relative z-10 container mx-auto px-4 text-center text-white pt-20">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-history-pro font-medium mb-8 leading-tight tracking-wide">
-            Клубный дом «Коллекционер»
+            Клубный дом «Коллекционер» на Петроградской стороне
           </h1>
 
           <div className="space-y-4 mb-8 md:mb-12 text-lg md:text-xl font-light">
@@ -89,7 +42,7 @@ export default function Hero() {
             </div>
             <div className="space-y-2">
               <p className="text-sm opacity-75 uppercase tracking-wide">Стоимость</p>
-              <p className="text-xl font-medium">от 30.79 млн руб.</p>
+              <p className="text-xl font-medium">от 32.9 млн руб.</p>
             </div>
             <div className="space-y-2">
               <p className="text-sm opacity-75 uppercase tracking-wide">Площадь</p>

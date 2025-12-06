@@ -7,6 +7,9 @@ export default function Location() {
     name: "Клубный дом «Коллекционер»",
     description:
       "Петроградская сторона: престижное окружение с гимназиями, вузами, ресторанами, клиниками и музеями; рядом набережные и скверы. У дома — приватный двор‑патио ез машин с ландшафтным дизайном и рабочими зонами на воздухе. Удобные выезды к Каменноостровскому и Большому проспектам, близость метро и магистралей города.",
+    containedInPlace: {
+      "@id": "https://kollektsioner-dom.ru/#complex",
+    },
     address: {
       "@type": "PostalAddress",
       streetAddress: "ул. Чапыгина, д. 4",
@@ -46,8 +49,6 @@ export default function Location() {
         value: true,
       },
     ],
-    keywords:
-      "Петроградская сторона, Чапыгина 4, приватный двор, патио, клубный дом, эклектика, центр Санкт-Петербурга",
   }
 
   return (
@@ -57,7 +58,7 @@ export default function Location() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-light mb-8 tracking-[0.2em] text-gray-700 uppercase font-history-pro">
-            ЛОКАЦИЯ
+            РАСПОЛОЖЕНИЕ НА УЛ. ЧАПЫГИНА: ИНФРАСТРУКТУРА РАЙОНА
           </h2>
           <div className="w-24 h-px bg-[#a8996e] mx-auto mb-8"></div>
         </div>

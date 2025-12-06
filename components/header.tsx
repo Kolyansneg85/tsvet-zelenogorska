@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Phone, MessageCircle } from "lucide-react"
+import { MessageCircle, Menu, X, Phone } from "lucide-react"
 
 const navigation = [
   { name: "О доме", href: "#about" },
@@ -103,6 +103,8 @@ export default function Header() {
                   <a href="tel:+78126605650">
                     <svg
                       className="w-[18px] h-[18px]"
+                      width="18"
+                      height="18"
                       viewBox="0 0 18 18"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +118,7 @@ export default function Header() {
                         fill="currentColor"
                       ></path>
                       <path
-                        d="M11.349 6.2221C11.35 5.90315 11.4154 5.5877 11.5415 5.29473C11.6676 5.00176 11.8516 4.73734 12.0827 4.51738L14.0618 2.53823C14.3023 2.28177 14.5982 2.08349 14.9268 1.95844C15.2554 1.83339 15.6082 1.78486 15.9584 1.81654C16.1877 1.84202 16.4077 1.92116 16.6007 2.04755C16.7936 2.17392 16.9542 2.34399 17.0691 2.54396C17.8897 3.97833 18.1744 5.73085 17.8924 7.61206C17.5325 10.0092 16.2685 12.3968 14.3326 14.3356C12.3944 16.2709 10.0068 17.535 7.60959 17.8946C5.7284 18.1769 3.97589 17.8922 2.54126 17.0715C2.34135 16.9565 2.17134 16.796 2.045 16.603C1.91867 16.4101 1.83956 16.1901 1.8141 15.9609C1.78242 15.6107 1.83096 15.2579 1.95602 14.9292C2.08108 14.6005 2.27937 14.3047 2.53585 14.0642L4.51495 12.0851C4.73489 11.8541 4.9993 11.67 5.29225 11.544C5.58521 11.4179 5.90065 11.3523 6.21958 11.3514C6.43206 11.353 6.64194 11.3983 6.83616 11.4845C7.03038 11.5707 7.20479 11.696 7.34852 11.8524L8.53866 13.1817C10.5308 12.1555 12.1531 10.5332 13.1792 8.54113L11.8501 7.35116C11.6936 7.20742 11.5683 7.033 11.4822 6.83876C11.396 6.64451 11.3506 6.4346 11.349 6.2221ZM12.4503 6.68055L14.278 8.31696L14.1401 8.61837C13.5783 9.82648 12.8077 10.926 11.8638 11.8662C10.9235 12.8102 9.82404 13.5807 8.61592 14.1425L8.31451 14.2805L6.67792 12.4526C6.61533 12.3878 6.54018 12.3365 6.45706 12.3018C6.37396 12.2672 6.28463 12.2499 6.19459 12.251C5.99824 12.2566 5.80492 12.301 5.62584 12.3818C5.44677 12.4625 5.28548 12.578 5.15131 12.7215L3.17223 14.7005C3.01474 14.8443 2.89121 15.0213 2.8106 15.2187C2.72998 15.4161 2.6943 15.629 2.70614 15.8419C2.71359 15.9339 2.74313 16.0227 2.79226 16.1007C2.8414 16.1789 2.90865 16.2439 2.98833 16.2905C4.24535 17.0095 5.79719 17.2565 7.47604 17.0047C9.68445 16.6733 11.8937 15.4992 13.6963 13.6992C15.4968 11.896 16.6709 9.6868 17.0023 7.4785C17.254 5.79956 17.007 4.2478 16.2881 2.99102C16.2416 2.91128 16.1765 2.84396 16.0984 2.79477C16.0203 2.74559 15.9314 2.71599 15.8394 2.70851C16.6265 2.6967 15.4137 2.73239 15.2163 2.813C15.0189 2.89362 14.8419 3.01714 14.6982 3.17461L12.719 5.15377C12.5755 5.28794 12.46 5.44923 12.3793 5.62831C12.2986 5.80738 12.2541 6.0007 12.2485 6.19706C12.2475 6.28714 12.2648 6.3765 12.2995 6.45964C12.3342 6.54278 12.3855 6.61795 12.4503 6.68055Z"
+                        d="M11.349 6.2221C11.35 5.90315 11.4154 5.5877 11.5415 5.29473C11.6676 5.00176 11.8516 4.73734 12.0827 4.51738L14.0618 2.53823C14.3023 2.28177 14.5982 2.08349 14.9268 1.95844C15.2554 1.83339 15.6082 1.78486 15.9584 1.81654C16.1877 1.84202 16.4077 1.92116 16.6007 2.04755C16.7936 2.17392 16.9542 2.34399 17.0691 2.54396C17.8897 3.97833 18.1744 5.73085 17.8924 7.61206C17.5325 10.0092 16.2685 12.3968 14.3326 14.3356C12.3944 16.2709 10.0068 17.535 7.60959 17.8946C5.7284 18.1769 3.97589 17.8922 2.54126 17.0715C2.34135 16.9565 2.17134 16.796 2.045 16.603C1.91867 16.4101 1.83956 16.1901 1.8141 15.9609C1.78242 15.6107 1.83096 15.2579 1.95602 14.9292C2.08108 14.6005 2.27937 14.3047 2.53585 14.0642L4.51495 12.0851C4.73489 11.8541 4.9993 11.67 5.29225 11.544C5.58521 11.4179 5.90065 11.3523 6.21958 11.3514C6.43206 11.353 6.64194 11.3983 6.83616 11.4845C7.03038 11.5707 7.20479 11.696 7.34852 11.8524L8.53866 13.1817C10.5308 12.1555 12.1531 10.5332 13.1792 8.54113L11.8501 7.35116C11.6936 7.20742 11.5683 7.033 11.4822 6.83876C11.396 6.64451 11.3506 6.4346 11.349 6.2221ZM12.4503 6.68055L14.278 8.31696L14.1401 8.61837C13.5783 9.82648 12.8077 10.926 11.8638 11.8662C10.9235 12.8102 9.82404 13.5807 8.61592 14.1425L8.31451 14.2805L6.67792 12.4526C6.61533 12.3878 6.54018 12.3365 6.45706 12.3018C6.37396 12.2672 6.28463 12.2499 6.19459 12.251C5.99824 12.2566 5.80492 12.301 5.62584 12.3818C5.44677 12.4625 5.28548 12.578 5.15131 12.7215L3.17223 14.7005C3.01474 14.8443 2.89121 15.0213 2.8106 15.2187C2.72998 15.4161 2.6943 15.629 2.70614 15.8419C2.71359 15.9339 2.74313 16.0227 2.79226 16.1007C2.8414 16.1789 2.90865 16.2439 2.98833 16.2905C4.24535 17.0095 5.79719 17.2565 7.47604 17.0047C9.68445 16.6733 11.8937 15.4992 13.6963 13.6992C15.4968 11.896 16.6709 9.6868 17.0023 7.4785C17.254 5.79956 17.007 4.2478 16.2881 2.99102C16.2416 2.91128 16.1765 2.84396 16.0984 2.79477C16.0203 2.74559 15.9314 2.71599 15.8394 2.70851C15.6265 2.6967 15.4137 2.73239 15.2163 2.813C15.0189 2.8936 14.8354 2.96808 14.6563 3.0325C14.4772 3.097 14.2839 3.14441 14.0948 3.14441C13.9048 3.14441 13.7115 3.097 13.5324 3.0325C13.3533 2.96808 13.1698 2.89742 13.0001 2.813C12.8304 2.72858 12.647 2.67117 12.4503 2.67117Z"
                         fill="currentColor"
                       ></path>
                     </svg>
@@ -124,13 +126,35 @@ export default function Header() {
                 </Button>
               </div>
 
-              {/* Mobile Menu Button */}
+              {/* Mobile Menu Toggle */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="lg:hidden text-white hover:text-[#a8996e] transition-colors duration-200 drop-shadow-md"
+                className="lg:hidden text-white p-2"
+                aria-label="Toggle menu"
               >
-                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
+
+              {/* Desktop CTA Buttons */}
+              <div className="hidden lg:flex items-center space-x-4">
+                <Button
+                  onClick={openChat}
+                  variant="outline"
+                  className="border-[#a8996e] text-[#a8996e] hover:bg-[#a8996e] hover:text-white transition-colors font-light tracking-wide bg-transparent"
+                >
+                  <MessageCircle className="w-[18px] h-[18px] mr-2" />
+                  Написать
+                </Button>
+                <Button
+                  asChild
+                  className="bg-[#a8996e] hover:bg-[#9d8f5f] text-white transition-colors font-light tracking-wide"
+                >
+                  <a href="tel:+78126605650">
+                    <Phone className="w-[16px] h-[16px] mr-2" />
+                    Позвонить
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -139,40 +163,28 @@ export default function Header() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-40 lg:hidden">
-          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsMobileMenuOpen(false)} />
-          <div className="fixed top-16 left-0 right-0 bg-black/90 backdrop-blur-md">
-            <nav className="container mx-auto px-4 py-6">
-              <div className="flex flex-col space-y-4">
-                {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-white hover:text-[#a8996e] transition-colors duration-200 font-light tracking-wide py-2"
-                  >
-                    {item.name}
-                  </a>
-                ))}
-                <div className="pt-4 border-t border-white/10">
-                  <a
-                    href="tel:+78126605650"
-                    className="flex items-center space-x-2 text-white hover:text-[#a8996e] transition-colors duration-200 font-light py-2"
-                  >
-                    <Phone className="h-4 w-4" />
-                    <span>+7 (812) 660-56-50</span>
-                  </a>
-                </div>
-                <div className="pt-4 border-t border-white/10">
-                  <Button
-                    onClick={openChat}
-                    className="bg-[#a8996e] hover:bg-[#9d8f5f] text-white px-6 py-3 rounded-[22px] font-light tracking-wide transition-colors w-full"
-                  >
-                    <MessageCircle className="w-[18px] h-[18px]" />
-                    <span className="ml-2">Открыть чат</span>
-                  </Button>
-                </div>
-              </div>
-            </nav>
-          </div>
+          <div className="fixed inset-0 bg-black/80 backdrop-blur-md" onClick={() => setIsMobileMenuOpen(false)} />
+          <nav className="fixed top-16 left-0 right-0 bg-black/90 backdrop-blur-md border-t border-[#a8996e]/20">
+            <div className="container mx-auto px-4 py-6 space-y-4">
+              {navigation.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="block text-white hover:text-[#a8996e] transition-colors duration-200 font-light tracking-wide py-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </a>
+              ))}
+              <a
+                href="tel:+78126605650"
+                className="block text-white hover:text-[#a8996e] transition-colors duration-200 font-light tracking-wide py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <Phone className="w-[16px] h-[16px] inline mr-2" />7 812 660 56 50
+              </a>
+            </div>
+          </nav>
         </div>
       )}
     </>

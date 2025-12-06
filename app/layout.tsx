@@ -43,10 +43,9 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'Клубный дом "Коллекционер" - Элитное жилье в Петроградском районе',
+  title: 'Купить квартиру в ЖК "Коллекционер" | Цены и планировки на Петроградской стороне',
   description:
     "Клубный дом премиум-класса в Петроградском районе Санкт-Петербурга на улице Чапыгина 4. Квартиры от 42.8 м². Срок сдачи III кв. 2028.",
-  keywords: "клубный дом, коллекционер, петроградский район, элитное жилье, санкт-петербург, чапыгина 4",
   authors: [{ name: "Клубный дом Коллекционер" }],
   creator: "Клубный дом Коллекционер",
   publisher: "Клубный дом Коллекционер",
@@ -76,7 +75,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Клубный дом "Коллекционер" - Элитное жилье в Петроградском районе',
+    title: 'Купить квартиру в ЖК "Коллекционер" | Цены и планировки на Петроградской',
     description:
       "Клубный дом премиум-класса в Петроградском районе Санкт-Петербурга на улице Чапыгина 4. Квартиры от 42.8 м². Срок сдачи III кв. 2028.",
     url: "https://kollektsioner-dom.ru",
@@ -94,7 +93,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: 'Клубный дом "Коллекционер" - Элитное жилье в Петроградском районе',
+    title: 'Купить квартиру в ЖК "Коллекционер" | Цены и планировки на Петроградской',
     description:
       "Клубный дом премиум-класса в Петроградском районе Санкт-Петербурга на улице Чапыгина 4. Квартиры от 42.8 м². Срок сдачи III кв. 2028.",
     images: ["https://kollektsioner-dom.ru/images/hero-building-light.webp"],
@@ -114,8 +113,140 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const apartmentComplexJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ApartmentComplex",
+    "@id": "https://kollektsioner-dom.ru/#complex",
+    name: "Клубный дом «Коллекционер»",
+    description:
+      "Воплощение изысканной архитектуры, приватности и арт-атмосферы для ценителей культурной жизни в центре Петроградского района. Каждый элемент дома отражает эстетику коллекционного произведения искусства: воздушные фасады из натурального камня, итальянская площадь у входа, приватный зеленый двор-патио, авторское лобби с пинакотекой и современными технологиями комфорта.",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "улица Чапыгина 4",
+      addressLocality: "Санкт-Петербург",
+      addressRegion: "Санкт-Петербург",
+      postalCode: "197046",
+      addressCountry: "RU",
+    },
+    numberOfBuildings: 2,
+    numberOfAccommodationUnits: 69,
+    numberOfRooms: 69,
+    floorSize: {
+      "@type": "QuantitativeValue",
+      minValue: 42.8,
+      maxValue: 222,
+      unitCode: "MTK",
+    },
+    url: "https://kollektsioner-dom.ru",
+    telephone: "+7 (812) 660-56-50",
+    amenityFeature: [
+      {
+        "@type": "LocationFeatureSpecification",
+        name: "Подземный паркинг",
+        value: true,
+        description: "57 машино-мест с лифтом и кладовыми",
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        name: "Консьерж-сервис",
+        value: true,
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        name: "Пинакотека",
+        value: true,
+        description: "Авторское лобби с пинакотекой",
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        name: "Приватный двор",
+        value: true,
+        description: "Закрытый двор-патио с ландшафтным садом",
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        name: "Современная архитектура",
+        description: "Панорамные окна",
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        name: "Эксклюзивные квартиры",
+        description: "Мансардные, двухуровневые и с террасами",
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        name: "Зелёная зона",
+        description: "Закрытый двор-патио с ландшафтным садом, зоной отдыха, детской и work-территорией с Wi-Fi",
+      },
+    ],
+  }
+
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    name: "ЖК Коллекционер",
+    description: "Клубный дом «Коллекционер» в Петроградском районе Санкт-Петербурга",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "улица Чапыгина 4",
+      addressLocality: "Санкт-Петербург",
+      addressRegion: "Санкт-Петербург",
+      addressCountry: "RU",
+    },
+    url: "https://kollektsioner-dom.ru",
+    telephone: "+7 (812) 660-56-50",
+    priceRange: "От 30792000 до 79276000",
+    areaServed: "Петроградский район",
+    serviceType: "Продажа недвижимости",
+  }
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Главная",
+        item: "https://kollektsioner-dom.ru",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Квартиры",
+        item: "https://kollektsioner-dom.ru#apartments",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Локация",
+        item: "https://kollektsioner-dom.ru#location",
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: "Новости",
+        item: "https://kollektsioner-dom.ru/news",
+      },
+      {
+        "@type": "ListItem",
+        position: 5,
+        name: "Контакты",
+        item: "https://kollektsioner-dom.ru#contacts",
+      },
+    ],
+  }
+
   return (
     <html lang="ru" className={`${inter.variable} ${historyPro.variable} ${ceraPro.variable} ${roboto.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(apartmentComplexJsonLd) }}
+        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      </head>
       <body className="overflow-x-hidden">
         <Script id="yandex-metrika" strategy="afterInteractive">
           {`

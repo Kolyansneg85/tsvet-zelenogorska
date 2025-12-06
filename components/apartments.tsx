@@ -572,7 +572,7 @@ export default function Apartments() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-light mb-8 tracking-wide text-gray-800 font-history-pro">
-              ПЛАНИРОВКИ
+              ПЛАНИРОВКИ И ЦЕНЫ КВАРТИР В ЖК «КОЛЛЕКЦИОНЕР»
             </h2>
             <div className="w-24 h-px bg-[#a8996e] mx-auto mb-8"></div>
             <div className="text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed space-y-6 text-left">
@@ -714,40 +714,42 @@ export default function Apartments() {
           <div className="grid gap-8 max-w-7xl mx-auto grid-cols-1 lg:grid-cols-3">
             {filteredApartments.length > 0 ? (
               filteredApartments.map((apartment, index) => (
-                <Card
+                <article
                   key={apartment.id}
-                  className="overflow-hidden border-0 shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] group"
+                  className="overflow-hidden border-0 shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] group rounded-lg bg-white"
                 >
-                  <div className="relative bg-white flex items-center justify-center p-4 h-80">
-                    <Image
-                      src={apartment.floorPlan || "/placeholder.svg"}
-                      alt={
-                        apartmentAltTexts[apartment.roomCount as keyof typeof apartmentAltTexts]?.[
-                          apartments[apartment.roomCount as keyof typeof apartments].findIndex(
-                            (a) => a.id === apartment.id,
-                          )
-                        ] || `Планировка ${apartment.type} в ЖК Коллекционер`
-                      }
-                      width={400}
-                      height={300}
-                      className="object-contain max-w-full max-h-full transition-transform duration-300 group-hover:scale-105"
-                      loading="lazy"
-                    />
-                  </div>
+                  <Card className="border-0 shadow-none h-full">
+                    <div className="relative bg-white flex items-center justify-center p-4 h-80">
+                      <Image
+                        src={apartment.floorPlan || "/placeholder.svg"}
+                        alt={
+                          apartmentAltTexts[apartment.roomCount as keyof typeof apartmentAltTexts]?.[
+                            apartments[apartment.roomCount as keyof typeof apartments].findIndex(
+                              (a) => a.id === apartment.id,
+                            )
+                          ] || `Планировка ${apartment.type} в ЖК Коллекционер`
+                        }
+                        width={400}
+                        height={300}
+                        className="object-contain max-w-full max-h-full transition-transform duration-300 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                    </div>
 
-                  <CardContent className="p-6 text-center">
-                    <h3 className="text-xl font-medium mb-2 text-gray-900">{apartment.type}</h3>
-                    <p className="text-gray-600 text-sm mb-1">{apartment.deliveryDate}</p>
-                    <p className="text-gray-600 text-sm mb-6">{apartment.planType}</p>
+                    <CardContent className="p-6 text-center">
+                      <h3 className="text-xl font-medium mb-2 text-gray-900">{apartment.type}</h3>
+                      <p className="text-gray-600 text-sm mb-1">{apartment.deliveryDate}</p>
+                      <p className="text-gray-600 text-sm mb-6">{apartment.planType}</p>
 
-                    <button
-                      onClick={() => openModal(apartment.type)}
-                      className="w-full bg-[#a8996e] hover:bg-[#9d8f5f] text-white px-6 py-3 rounded-[22px] font-light tracking-wide transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
-                    >
-                      Узнать цену
-                    </button>
-                  </CardContent>
-                </Card>
+                      <button
+                        onClick={() => openModal(apartment.type)}
+                        className="w-full bg-[#a8996e] hover:bg-[#9d8f5f] text-white px-6 py-3 rounded-[22px] font-light tracking-wide transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
+                      >
+                        Узнать цену
+                      </button>
+                    </CardContent>
+                  </Card>
+                </article>
               ))
             ) : (
               <div className="col-span-full text-center py-12">

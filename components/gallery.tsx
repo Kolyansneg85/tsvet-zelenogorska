@@ -41,8 +41,7 @@ export default function Gallery() {
     name: "Галерея ЖК Коллекционер",
     description: "Фотографии жилого комплекса «Коллекционер» в Санкт-Петербурге",
     about: {
-      "@type": "ApartmentComplex",
-      name: "Клубный дом «Коллекционер»",
+      "@id": "https://kollektsioner-dom.ru/#complex",
     },
     image: images.map((img, index) => ({
       "@type": "ImageObject",
@@ -87,7 +86,7 @@ export default function Gallery() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 pt-8">
             <h2 className="text-3xl md:text-4xl font-light mb-8 tracking-wide text-gray-900 font-history-pro">
-              ГАЛЕРЕЯ
+              ГАЛЕРЕЯ КЛУБНОГО ДОМА «КОЛЛЕКЦИОНЕР»
             </h2>
             <div className="w-24 h-px bg-[#a8996e] mx-auto mb-8"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
@@ -129,6 +128,7 @@ export default function Gallery() {
                       src={image.src || "/placeholder.svg"}
                       alt={image.alt}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 1280px"
                       className="object-cover transition-all duration-700 ease-out"
                       priority={index === 0}
                       loading={index === 0 ? undefined : "lazy"}
