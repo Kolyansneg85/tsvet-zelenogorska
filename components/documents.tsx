@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Download, ChevronDown, ChevronUp } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card"
 
 const documentsData = [
   {
@@ -9,7 +10,7 @@ const documentsData = [
     documents: [
       {
         name: "Разрешение на строительство от 19.08.2025 г.",
-        url: "#",
+        url: "https://6ce3ab7d-ca19-4563-89f5-bf0d195953bc.selstorage.ru/RNS_Kollektsioner_19.08.25.pdf",
         date: "19.08.2025",
       },
     ],
@@ -17,6 +18,11 @@ const documentsData = [
   {
     category: "ПРОЕКТНАЯ ДЕКЛАРАЦИЯ",
     documents: [
+      {
+        name: "Проектная декларация от 08.12.2025 г.",
+        url: "https://6ce3ab7d-ca19-4563-89f5-bf0d195953bc.selstorage.ru/obj68183_pd78-002154.pdf",
+        date: "08.12.2025",
+      },
       {
         name: "Проектная декларация от 07.10.2025 г.",
         url: "https://6ce3ab7d-ca19-4563-89f5-bf0d195953bc.selstorage.ru/PD_Kollektsioner.pdf",
@@ -29,8 +35,8 @@ const documentsData = [
     documents: [
       {
         name: "Образец договора долевого участия",
-        url: "#",
-        date: "01.08.2025",
+        url: "https://6ce3ab7d-ca19-4563-89f5-bf0d195953bc.selstorage.ru/obj68183_ddu_proj1213059.docx",
+        date: "16.10.2025",
       },
     ],
   },
@@ -39,8 +45,8 @@ const documentsData = [
     documents: [
       {
         name: "Положительное заключение экспертизы проекта",
-        url: "#",
-        date: "10.07.2025",
+        url: "https://6ce3ab7d-ca19-4563-89f5-bf0d195953bc.selstorage.ru/%25d0%259a%25d0%25be%25d0%25bf%25d0%25b8%25d1%258f%2B%25d0%25b8%25d0%25bd%25d1%2584%25d0%25be%25d1%2580%25d0%25bc%25d0%25b0%25d1%2586%25d0%25b8%25d0%25b8%2B%25d0%25bf%25d0%25be%25%25d0%25b1%25d1%2580%25d0%25b0%25d1%2589%25d0%25b5%25d0%25bd%25d0%25b8%25d1%258e.pdf",
+        date: "15.08.2025",
       },
     ],
   },
@@ -54,16 +60,16 @@ export default function Documents() {
   }
 
   return (
-    <section id="documents" className="py-16 bg-white scroll-mt-20">
+    <section id="documents" className="py-16 bg-gray-50 scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 font-history-pro text-[#a8996e]">
-            ДОКУМЕНТЫ КОЛЛЕКЦИОНЕР
+          <h2 className="text-2xl md:text-3xl font-light mb-6 text-gray-700 uppercase font-history-pro">
+            Документы Коллекционер
           </h2>
           <div className="w-24 h-px bg-[#a8996e] mx-auto mb-8"></div>
         </div>
 
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {/* Developer Info */}
           <div className="mb-8 text-gray-700">
             <p className="text-lg font-semibold mb-3">ООО «Специализированный застройщик «ЭРБИАЙ-3»</p>
@@ -74,51 +80,52 @@ export default function Documents() {
           </div>
 
           {/* Documents Sections */}
-          <div className="space-y-1 border-t border-gray-200">
+          <div className="space-y-4">
             {documentsData.map((section, index) => (
-              <div key={index} className="border-b border-gray-200">
+              <Card key={index} className="overflow-hidden">
                 <button
                   onClick={() => toggleSection(index)}
-                  className="w-full text-left py-6 hover:bg-gray-50 transition-colors flex justify-between items-center group"
+                  className="w-full text-left p-6 hover:bg-gray-50 transition-colors"
                   aria-expanded={openSections.includes(index)}
                 >
-                  <h3 className="text-base md:text-lg font-medium text-[#a8996e] font-history-pro pr-4">
-                    {section.category}
-                  </h3>
-                  <div className="flex-shrink-0">
+                  <div className="flex justify-between items-center">
+                    <h3 className="text-lg font-semibold pr-4 font-history-pro">{section.category}</h3>
                     {openSections.includes(index) ? (
-                      <ChevronUp className="h-5 w-5 text-[#a8996e]" width={20} height={20} />
+                      <ChevronUp className="h-5 w-5 text-[#a8996e] flex-shrink-0" />
                     ) : (
-                      <ChevronDown className="h-5 w-5 text-[#a8996e]" width={20} height={20} />
+                      <ChevronDown className="h-5 w-5 text-[#a8996e] flex-shrink-0" />
                     )}
                   </div>
                 </button>
 
                 {openSections.includes(index) && (
-                  <div className="pb-6 px-4">
-                    <div className="space-y-3">
-                      {section.documents.map((doc, docIndex) => (
-                        <a
-                          key={docIndex}
-                          href={doc.url}
-                          className="flex items-center gap-3 p-4 rounded-lg transition-colors group"
-                          download
-                        >
-                          <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#a8996e]/10 flex items-center justify-center">
-                            <Download className="h-5 w-5 text-[#a8996e]" width={20} height={20} />
-                          </div>
-                          <div className="flex-1">
-                            <p className="text-gray-900 font-medium group-hover:text-[#a8996e] transition-colors">
-                              {doc.name}
-                            </p>
-                            <p className="text-sm text-gray-500 mt-1">от {doc.date}</p>
-                          </div>
-                        </a>
-                      ))}
+                  <CardContent className="pt-0 pb-6">
+                    <div className="border-t pt-4">
+                      <div className="space-y-3">
+                        {section.documents.map((doc, docIndex) => (
+                          <a
+                            key={docIndex}
+                            href={doc.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-3 p-3 rounded-lg transition-colors group"
+                          >
+                            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#a8996e]/10 flex items-center justify-center">
+                              <Download className="h-5 w-5 text-[#a8996e]" width={20} height={20} />
+                            </div>
+                            <div className="flex-1">
+                              <p className="text-gray-900 font-medium group-hover:text-[#a8996e] transition-colors">
+                                {doc.name}
+                              </p>
+                              <p className="text-sm text-gray-500 mt-1">от {doc.date}</p>
+                            </div>
+                          </a>
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                  </CardContent>
                 )}
-              </div>
+              </Card>
             ))}
           </div>
 
