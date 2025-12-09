@@ -40,16 +40,6 @@ const documentsData = [
       },
     ],
   },
-  {
-    category: "ЗАКЛЮЧЕНИЕ ЭКСПЕРТИЗЫ",
-    documents: [
-      {
-        name: "Положительное заключение экспертизы проекта",
-        url: "https://6ce3ab7d-ca19-4563-89f5-bf0d195953bc.selstorage.ru/%25d0%259a%25d0%25be%25d0%25bf%25d0%25b8%25d1%258f%2B%25d0%25b8%25d0%25bd%25d1%2584%25d0%25be%25d1%2580%25d0%25bc%25d0%25b0%25d1%2586%25d0%25b8%25d0%25b8%2B%25d0%25bf%25d0%25be%25%25d0%25b1%25d1%2580%25d0%25b0%25d1%2589%25d0%25b5%25d0%25bd%25d0%25b8%25d1%258e.pdf",
-        date: "15.08.2025",
-      },
-    ],
-  },
 ]
 
 export default function Documents() {
