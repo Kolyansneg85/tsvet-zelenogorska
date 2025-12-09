@@ -148,7 +148,7 @@ export default function Infrastructure() {
       <section id="infrastructure" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-light mb-8 text-gray-700 uppercase font-history-pro">
+            <h2 className="text-2xl md:text-3xl font-light mb-8 text-gray-700 uppercase font-history-pro">
               ИНФРАСТРУКТУРА И ПРОСТРАНСТВО КЛУБНОГО ДОМА
             </h2>
             <div className="w-24 h-px bg-[#a8996e] mx-auto mb-8"></div>
@@ -280,7 +280,7 @@ export default function Infrastructure() {
 
               {/* Contact Form */}
               <div className="pt-6 border-t border-gray-200">
-                <h3 className="text-lg font-medium text-[#a8996e] mb-4">Узнать больше о доме</h3>
+                <h3 className="text-lg md:text-xl font-medium text-[#a8996e] mb-4">Узнать больше о доме</h3>
 
                 {isSuccess && (
                   <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-[20px]">

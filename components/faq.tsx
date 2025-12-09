@@ -85,7 +85,7 @@ export default function FAQ() {
       <section id="faq" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-6 font-history-pro">Часто задаваемые вопросы</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 font-history-pro">Часто задаваемые вопросы</h2>
             <div className="w-24 h-px bg-[#a8996e] mx-auto mb-8"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Ответы на самые популярные вопросы о клубном доме «Коллекционер»

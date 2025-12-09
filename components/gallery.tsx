@@ -85,7 +85,7 @@ export default function Gallery() {
       <section id="gallery" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 pt-8">
-            <h2 className="text-3xl md:text-4xl font-light mb-8 tracking-wide text-gray-900 font-history-pro">
+            <h2 className="text-2xl md:text-3xl font-light mb-8 tracking-wide text-gray-900 font-history-pro">
               ГАЛЕРЕЯ КЛУБНОГО ДОМА «КОЛЛЕКЦИОНЕР»
             </h2>
             <div className="w-24 h-px bg-[#a8996e] mx-auto mb-8"></div>

@@ -95,7 +95,7 @@ export default function ContactForm() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-light mb-8 tracking-wide font-history-pro">СВЯЖИТЕСЬ С НАМИ</h2>
+            <h2 className="text-2xl md:text-3xl font-light mb-8 tracking-wide font-history-pro">СВЯЖИТЕСЬ С НАМИ</h2>
             <div className="w-24 h-px bg-[#a8996e] mb-8"></div>
             <p className="text-xl font-light leading-relaxed mb-12 opacity-90">
               Оставьте заявку, и наш менеджер свяжется с вами в течение 15 минут для консультации по всем вопросам.

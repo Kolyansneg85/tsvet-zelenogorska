@@ -32,7 +32,7 @@ export default function IntelligentCourtyard() {
 
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-light mb-8 tracking-[0.2em] text-gray-700 uppercase font-history-pro">
+          <h2 className="text-2xl md:text-3xl font-light mb-8 text-gray-700 uppercase font-history-pro">
             ИННОВАЦИИ И ТЕХНОЛОГИИ
           </h2>
           <div className="w-24 h-px bg-[#a8996e] mx-auto mb-8"></div>

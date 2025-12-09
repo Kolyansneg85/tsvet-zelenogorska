@@ -8,6 +8,7 @@ import Location from "@/components/location"
 import Infrastructure from "@/components/infrastructure"
 import IntelligentCourtyard from "@/components/intelligent-courtyard"
 import LifeScenarios from "@/components/life-scenarios"
+import Documents from "@/components/documents"
 import FAQ from "@/components/faq"
 import ContactForm from "@/components/contact-form"
 import Footer from "@/components/footer"
@@ -31,6 +32,7 @@ export default function Home() {
       <Infrastructure />
       <IntelligentCourtyard />
       <LifeScenarios />
+      <Documents />
       <FAQ />
       <ContactForm />
       <Footer />
