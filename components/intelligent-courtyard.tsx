@@ -10,9 +10,13 @@ export default function IntelligentCourtyard() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Place",
+            "@id": "https://kollektsioner-dom.ru/#technologies",
             name: "Инновации и технологии клубного дома «Коллекционер»",
             description:
               "Современные инженерные решения: металлопластиковые двери с шумоизоляцией, многослойные теплосберегающие фасады, индивидуальный тепловой пункт и вентиляция, система раздельного сбора мусора, энергосберегающее освещение в общих зонах, подземный паркинг с лифтом и усилителями связи, круглосуточное видеонаблюдение и контроль доступа, единый узел высокоскоростного интернета.",
+            isPartOf: {
+              "@id": "https://kollektsioner-dom.ru/#complex",
+            },
             amenityFeature: [
               { "@type": "LocationFeatureSpecification", name: "Двери с усиленной шумоизоляцией", value: true },
               { "@type": "LocationFeatureSpecification", name: "Теплосберегающие фасады", value: true },

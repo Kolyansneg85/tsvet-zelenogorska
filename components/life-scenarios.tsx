@@ -13,19 +13,8 @@ export default function LifeScenarios() {
             description:
               "Пинакотека с работами Латифа Казбекова и Виктора Грачёва, ставшая центральным элементом общественных пространств дома. Современное искусство, гармонично интегрированное в архитектуру и атмосферу жилого комплекса.",
             artMedium: "живопись, скульптура",
-            inProject: {
-              "@type": "Project",
-              name: "Клубный дом «Коллекционер», Санкт-Петербург",
-            },
-            locationCreated: {
-              "@type": "Place",
-              name: "Клубный дом «Коллекционер»",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "ул. Чапыгина, д. 4",
-                addressLocality: "Санкт-Петербург",
-                addressCountry: "RU",
-              },
+            isPartOf: {
+              "@id": "https://kollektsioner-dom.ru/#complex",
             },
           }),
         }}
