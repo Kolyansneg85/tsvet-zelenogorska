@@ -745,6 +745,9 @@ export default function Apartments() {
                       <button
                         onClick={() => openModal(apartment.type)}
                         className="w-full bg-[#a8996e] hover:bg-[#9d8f5f] text-white px-6 py-3 rounded-[22px] font-light tracking-wide transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
+                        data-apartment-type={apartment.type}
+                        data-action="price-inquiry"
+                        data-section="apartments"
                       >
                         Узнать цену
                       </button>

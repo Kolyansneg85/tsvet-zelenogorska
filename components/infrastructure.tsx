@@ -194,6 +194,8 @@ export default function Infrastructure() {
             <button
               onClick={openModal}
               className="bg-[#a8996e] hover:bg-[#9d8f5f] text-white px-6 py-3 rounded-[22px] font-light tracking-wide transition-colors"
+              data-action="courtyard-inquiry"
+              data-section="infrastructure"
             >
               Подробнее
             </button>

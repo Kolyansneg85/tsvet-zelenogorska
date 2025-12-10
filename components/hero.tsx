@@ -75,6 +75,8 @@ export default function Hero() {
                 e.currentTarget.style.setProperty("background", "rgba(255, 255, 255, 0.2)", "important")
                 e.currentTarget.style.setProperty("color", "white", "important")
               }}
+              data-action="presentation-download"
+              data-section="hero"
             >
               ПРЕЗЕНТАЦИЯ
             </button>
