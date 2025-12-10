@@ -91,6 +91,7 @@ export default function Location() {
                 src="/images/location-complex.webp"
                 alt="ЖК Коллекционер в контексте Петроградской стороны - современная архитектура среди исторических зданий"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
                 className="object-cover"
                 loading="lazy"
               />

@@ -162,6 +162,7 @@ export default function Infrastructure() {
                   src="/images/courtyard-1.jpeg"
                   alt="Приватный двор-патио клубного дома Коллекционер с зонами отдыха и ландшафтным дизайном"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
                   className="object-cover"
                   loading="lazy"
                 />
@@ -224,6 +225,7 @@ export default function Infrastructure() {
                     src={courtImages[currentImageIndex].src || "/placeholder.svg"}
                     alt={courtImages[currentImageIndex].alt}
                     fill
+                    sizes="(max-width: 768px) 90vw, (max-width: 1024px) 80vw, 85vw"
                     className="object-cover"
                     loading="lazy"
                   />

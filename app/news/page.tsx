@@ -33,7 +33,7 @@ export const metadata = {
   description:
     "Последние новости о клубном доме Коллекционер. Актуальная информация о ходе строительства, акциях и событиях.",
   alternates: {
-    canonical: "https://kollektsioner-dom.ru/news",
+    canonical: "https://kollektsioner-dom.ru/news/",
   },
 }
 

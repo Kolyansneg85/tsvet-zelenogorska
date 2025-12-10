@@ -46,8 +46,9 @@ export default function LifeScenarios() {
               <div className="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/images/art-gallery.png"
-                  alt="Пинакотека клубного дома «Коллекционер» с произведениями искусства Латифа Казбекова и Виктора Грачёва в современном интерьере лобби"
+                  alt="Пинакотека в современном интерьере лобби ЖК Коллекционер"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
                   className="object-cover"
                   loading="lazy"
                 />

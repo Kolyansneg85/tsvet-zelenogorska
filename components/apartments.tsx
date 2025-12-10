@@ -729,6 +729,7 @@ export default function Apartments() {
                             )
                           ] || `Планировка ${apartment.type} в ЖК Коллекционер`
                         }
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px"
                         width={400}
                         height={300}
                         className="object-contain max-w-full max-h-full transition-transform duration-300 group-hover:scale-105"

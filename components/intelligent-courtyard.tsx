@@ -70,6 +70,7 @@ export default function IntelligentCourtyard() {
                 src="/images/intelligent-interior.png"
                 alt="Современный интерьер с инновационными технологиями и дизайнерской мебелью в клубном доме Коллекционер"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
                 className="object-cover"
                 loading="lazy"
               />

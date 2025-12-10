@@ -45,7 +45,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: 'Купить квартиру в ЖК "Коллекционер" | Цены и планировки на Петроградской стороне',
   description:
-    "Клубный дом премиум-класса в Петроградском районе Санкт-Петербурга на улице Чапыгина 4. Квартиры от 42.8 м². Срок сдачи III кв. 2028.",
+    "Клубный дом «Коллекционер» на Петроградской: 69 квартир от 43 м², мансарды, двухуровневые. Сдача III кв. 2028. Цены от 32.9 млн ₽",
   authors: [{ name: "Клубный дом Коллекционер" }],
   creator: "Клубный дом Коллекционер",
   publisher: "Клубный дом Коллекционер",
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Купить квартиру в ЖК "Коллекционер" | Цены и планировки на Петроградской',
     description:
-      "Клубный дом премиум-класса в Петроградском районе Санкт-Петербурга на улице Чапыгина 4. Квартиры от 42.8 м². Срок сдачи III кв. 2028.",
+      "Клубный дом «Коллекционер» на Петроградской: 69 квартир от 43 м², мансарды, двухуровневые. Сдача III кв. 2028. Цены от 32.9 млн ₽",
     url: "https://kollektsioner-dom.ru",
     siteName: "Клубный дом Коллекционер",
     images: [
@@ -95,7 +95,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: 'Купить квартиру в ЖК "Коллекционер" | Цены и планировки на Петроградской',
     description:
-      "Клубный дом премиум-класса в Петроградском районе Санкт-Петербурга на улице Чапыгина 4. Квартиры от 42.8 м². Срок сдачи III кв. 2028.",
+      "Клубный дом «Коллекционер» на Петроградской: 69 квартир от 43 м², мансарды, двухуровневые. Сдача III кв. 2028. Цены от 32.9 млн ₽",
     images: ["https://kollektsioner-dom.ru/images/hero-building-light.webp"],
   },
   alternates: {
@@ -238,13 +238,13 @@ export default function RootLayout({
         "@type": "ListItem",
         position: 2,
         name: "Квартиры",
-        item: "https://kollektsioner-dom.ru#apartments",
+        item: "https://kollektsioner-dom.ru/#apartments",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Локация",
-        item: "https://kollektsioner-dom.ru#location",
+        item: "https://kollektsioner-dom.ru/#location",
       },
       {
         "@type": "ListItem",
@@ -256,7 +256,7 @@ export default function RootLayout({
         "@type": "ListItem",
         position: 5,
         name: "Контакты",
-        item: "https://kollektsioner-dom.ru#contacts",
+        item: "https://kollektsioner-dom.ru/#contacts",
       },
     ],
   }

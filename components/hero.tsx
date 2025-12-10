@@ -16,6 +16,7 @@ export default function Hero() {
             src="/images/hero-building-light.webp"
             alt="ЖК Коллекционер"
             fill
+            sizes="(max-width: 768px) 100vw, 100vw"
             className="object-cover brightness-95"
             priority
             fetchPriority="high"

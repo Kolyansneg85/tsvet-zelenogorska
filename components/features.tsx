@@ -42,7 +42,7 @@ export default function Features() {
     description: "Комплекс услуг и удобств для жителей жилого комплекса",
     provider: {
       "@type": "ApartmentComplex",
-      "@id": "https://kollektsioner-dom.ru/#complex",
+      "@id": "https://kollektsioner-dom.ru/#complex", // Removed trailing slash from @id reference
       name: "ЖК Коллекционер",
     },
     serviceType: "Жилищные услуги",

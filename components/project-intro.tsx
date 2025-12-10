@@ -92,8 +92,9 @@ export default function ProjectIntro() {
               <div className="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/images/project-intro-building.webp"
-                  alt="Клубный дом «Коллекционер» на Петроградской стороне - эклектичная архитектура с натуральным камнем, башенками и латунными инкрустациями в историческом центре Санкт-Петербурга"
+                  alt="Клубный дом «Коллекционер» на Петроградской стороне"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
                   className="object-cover"
                 />
               </div>
