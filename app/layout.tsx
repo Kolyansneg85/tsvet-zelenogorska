@@ -183,7 +183,7 @@ export default function RootLayout({
 
   const organizationJsonLd = {
     "@context": "https://schema.org",
-    "@type": "RealEstateAgent",
+    "@type": "Organization",
     name: "ЖК Коллекционер",
     description: "Клубный дом «Коллекционер» в Петроградском районе Санкт-Петербурга",
     address: {
@@ -195,9 +195,6 @@ export default function RootLayout({
     },
     url: "https://kollektsioner-dom.ru",
     telephone: "+7 (812) 660-56-50",
-    priceRange: "От 30792000 до 79276000",
-    areaServed: "Петроградский район",
-    serviceType: "Продажа недвижимости",
   }
 
   const breadcrumbJsonLd = {

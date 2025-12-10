@@ -58,13 +58,12 @@ const faqData = [
 ]
 
 export default function FAQ() {
-  const [openItems, setOpenItems] = useState<number[]>([])
+  const [openItems, setOpenItems] = useState<number[]>([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
 
   const toggleItem = (index: number) => {
     setOpenItems((prev) => (prev.includes(index) ? prev.filter((item) => item !== index) : [...prev, index]))
   }
 
-  // Структурированные данные для поисковых систем
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -82,7 +81,7 @@ export default function FAQ() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
 
-      <section id="faq" className="py-16 bg-gray-50 scroll-mt-20">
+      <section id="faq" className="py-16 bg-gray-50 scroll-mt-20" itemScope itemType="https://schema.org/FAQPage">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-2xl md:text-3xl font-light mb-6 text-gray-700 uppercase font-history-pro">
@@ -96,14 +95,22 @@ export default function FAQ() {
 
           <div className="max-w-4xl mx-auto space-y-4">
             {faqData.map((item, index) => (
-              <Card key={index} className="overflow-hidden">
+              <Card
+                key={index}
+                className="overflow-hidden"
+                itemScope
+                itemProp="mainEntity"
+                itemType="https://schema.org/Question"
+              >
                 <button
                   onClick={() => toggleItem(index)}
                   className="w-full text-left p-6 hover:bg-gray-50 transition-colors"
                   aria-expanded={openItems.includes(index)}
                 >
                   <div className="flex justify-between items-center">
-                    <h3 className="text-lg font-semibold pr-4 font-cera-pro">{item.question}</h3>
+                    <h3 className="text-lg font-semibold pr-4 font-cera-pro" itemProp="name">
+                      {item.question}
+                    </h3>
                     {openItems.includes(index) ? (
                       <ChevronUp className="h-5 w-5 text-[#a8996e] flex-shrink-0" />
                     ) : (
@@ -113,9 +120,16 @@ export default function FAQ() {
                 </button>
 
                 {openItems.includes(index) && (
-                  <CardContent className="pt-0 pb-6">
+                  <CardContent
+                    className="pt-0 pb-6"
+                    itemScope
+                    itemProp="acceptedAnswer"
+                    itemType="https://schema.org/Answer"
+                  >
                     <div className="border-t pt-4">
-                      <p className="text-gray-600 leading-relaxed">{item.answer}</p>
+                      <p className="text-gray-600 leading-relaxed" itemProp="text">
+                        {item.answer}
+                      </p>
                     </div>
                   </CardContent>
                 )}

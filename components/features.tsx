@@ -41,7 +41,8 @@ export default function Features() {
     name: "Инфраструктура ЖК Коллекционер",
     description: "Комплекс услуг и удобств для жителей жилого комплекса",
     provider: {
-      "@type": "RealEstateAgent",
+      "@type": "ApartmentComplex",
+      "@id": "https://kollektsioner-dom.ru/#complex",
       name: "ЖК Коллекционер",
     },
     serviceType: "Жилищные услуги",

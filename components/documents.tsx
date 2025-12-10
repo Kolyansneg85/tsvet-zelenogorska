@@ -43,7 +43,7 @@ const documentsData = [
 ]
 
 export default function Documents() {
-  const [openSections, setOpenSections] = useState<number[]>([])
+  const [openSections, setOpenSections] = useState<number[]>([1])
 
   const toggleSection = (index: number) => {
     setOpenSections((prev) => (prev.includes(index) ? prev.filter((item) => item !== index) : [...prev, index]))
