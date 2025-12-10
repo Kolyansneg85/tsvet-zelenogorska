@@ -22,7 +22,7 @@ export default function LifeScenarios() {
               name: "Клубный дом «Коллекционер»",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "ул. Чапыгина, 4",
+                streetAddress: "ул. Чапыгина, д. 4",
                 addressLocality: "Санкт-Петербург",
                 addressCountry: "RU",
               },

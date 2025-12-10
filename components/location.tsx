@@ -19,8 +19,8 @@ export default function Location() {
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "59.969",
-      longitude: "30.312",
+      latitude: "59.973117",
+      longitude: "30.307339",
     },
     amenityFeature: [
       {

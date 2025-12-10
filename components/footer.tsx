@@ -52,12 +52,17 @@ export default function Footer() {
 
           {/* Документы */}
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/privacy" className="text-[#a8996e] hover:text-[#c4b896] transition-colors flex items-center">
+            <Link
+              href="/privacy"
+              rel="nofollow"
+              className="text-[#a8996e] hover:text-[#c4b896] transition-colors flex items-center"
+            >
               Политика конфиденциальности
               <ExternalLink className="ml-1 h-3 w-3" />
             </Link>
             <Link
               href="/personal-data"
+              rel="nofollow"
               className="text-[#a8996e] hover:text-[#c4b896] transition-colors flex items-center"
             >
               Согласие на обработку персональных данных

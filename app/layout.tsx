@@ -54,8 +54,8 @@ export const metadata: Metadata = {
     language: "Russian",
     "geo.region": "RU-SPE",
     "geo.placename": "Saint Petersburg",
-    "geo.position": "59.9311;30.3609",
-    ICBM: "59.9311, 30.3609",
+    "geo.position": "59.973117;30.307339",
+    ICBM: "59.973117, 30.307339",
   },
   formatDetection: {
     email: false,
@@ -100,6 +100,14 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://kollektsioner-dom.ru",
+    types: {
+      "application/xml+sitemap": [
+        {
+          url: "/sitemap.xml",
+          title: "Sitemap",
+        },
+      ],
+    },
   },
   icons: {
     icon: "/favicon.png",
@@ -122,11 +130,16 @@ export default function RootLayout({
       "Воплощение изысканной архитектуры, приватности и арт-атмосферы для ценителей культурной жизни в центре Петроградского района. Каждый элемент дома отражает эстетику коллекционного произведения искусства: воздушные фасады из натурального камня, итальянская площадь у входа, приватный зеленый двор-патио, авторское лобби с пинакотекой и современными технологиями комфорта.",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "улица Чапыгина 4",
+      streetAddress: "ул. Чапыгина, д. 4",
       addressLocality: "Санкт-Петербург",
       addressRegion: "Санкт-Петербург",
       postalCode: "197046",
       addressCountry: "RU",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "59.973117",
+      longitude: "30.307339",
     },
     numberOfBuildings: 2,
     numberOfAccommodationUnits: 69,
@@ -139,6 +152,20 @@ export default function RootLayout({
     },
     url: "https://kollektsioner-dom.ru",
     telephone: "+7 (812) 660-56-50",
+    offers: {
+      "@type": "AggregateOffer",
+      priceCurrency: "RUB",
+      lowPrice: "32900000",
+      highPrice: "150000000",
+      priceValidUntil: "2025-12-31",
+      url: "https://kollektsioner-dom.ru",
+      availability: "https://schema.org/InStock",
+      seller: {
+        "@type": "Organization",
+        name: "ЖК Коллекционер",
+      },
+      validFrom: "2025-12-10",
+    },
     amenityFeature: [
       {
         "@type": "LocationFeatureSpecification",
@@ -188,7 +215,7 @@ export default function RootLayout({
     description: "Клубный дом «Коллекционер» в Петроградском районе Санкт-Петербурга",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "улица Чапыгина 4",
+      streetAddress: "ул. Чапыгина, д. 4",
       addressLocality: "Санкт-Петербург",
       addressRegion: "Санкт-Петербург",
       addressCountry: "RU",

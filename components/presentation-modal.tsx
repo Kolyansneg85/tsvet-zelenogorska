@@ -193,7 +193,7 @@ export default function PresentationModal({ isOpen, onClose }: PresentationModal
           {/* Privacy agreement text */}
           <p className="text-xs text-gray-500 text-center">
             Нажимая кнопку, вы соглашаетесь с{" "}
-            <Link href="/privacy" className="text-[#a8996e] hover:text-[#9d8f5f] underline">
+            <Link href="/privacy" rel="nofollow" className="text-[#a8996e] hover:text-[#9d8f5f] underline">
               обработкой персональных данных
             </Link>
           </p>
