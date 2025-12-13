@@ -11,10 +11,10 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-cera-pro)", "sans-serif"],
+        sans: ["var(--font-inter)", "sans-serif"],
         inter: ["var(--font-inter)", "sans-serif"],
-        "history-pro": ["var(--font-history-pro)", "serif"],
-        "cera-pro": ["var(--font-cera-pro)", "sans-serif"],
+        "history-pro": ["var(--font-roboto)", "serif"],
+        "cera-pro": ["var(--font-inter)", "sans-serif"],
         roboto: ["var(--font-roboto)", "sans-serif"],
       },
       borderRadius: {
